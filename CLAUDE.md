@@ -6,26 +6,6 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 This repository manages **Agent Skills**—modular packages that extend Claude's capabilities with specialized knowledge, workflows, and tools. Skills are "onboarding guides" for specific domains that transform Claude from a general-purpose agent into a specialized one.
 
-## Commands
-
-### Initialize a new skill
-```bash
-python plugins/skill-creator/scripts/init_skill.py <skill-name> --path <output-directory>
-```
-Creates a skill directory with template SKILL.md and example resource directories (scripts/, references/, assets/).
-
-### Validate a skill
-```bash
-python plugins/skill-creator/scripts/quick_validate.py <skill-directory>
-```
-Checks YAML frontmatter format, naming conventions, and required fields.
-
-### Package a skill for distribution
-```bash
-python plugins/skill-creator/scripts/package_skill.py <skill-directory> [output-directory]
-```
-Validates and packages a skill into a `.skill` file (ZIP archive with .skill extension).
-
 ## Architecture
 
 ### Skill Structure
@@ -44,8 +24,7 @@ Skills use three-level loading to manage context efficiently:
 3. **Bundled resources** - Loaded/executed as needed
 
 ### Key Files
-- `plugins/skill-creator/` - Core skill for creating other skills
-- `plugins/spring-boot/` - Spring Boot development patterns and best practices
+- `skills/spring-boot/` - Spring Boot development patterns and best practices
 - `.claude-plugin/marketplace.json` - Plugin registry metadata
 
 ### Naming Conventions

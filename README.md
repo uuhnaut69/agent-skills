@@ -12,9 +12,9 @@ Skills are "onboarding guides" for specific domains that transform Claude from a
 
 ## Available Skills
 
-| Skill                               | Description                                                                                                                                                                                            |
-| ----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| [spring-boot](plugins/spring-boot/) | Spring Boot development patterns, best practices, and Spring Boot 4 features. Covers REST APIs, dependency injection, testing strategies, error handling with ProblemDetail, and modern Java patterns. |
+| Skill                              | Description                                                                                                                                                                                            |
+| ---------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| [spring-boot](skills/spring-boot/) | Spring Boot development patterns, best practices, and Spring Boot 4 features. Covers REST APIs, dependency injection, testing strategies, error handling with ProblemDetail, and modern Java patterns. |
 
 ## Installation
 
@@ -22,8 +22,8 @@ Skills are "onboarding guides" for specific domains that transform Claude from a
 
 ```bash
 /plugin marketplace add uuhnaut69/agent-skills
-/plugin enable uuhnaut69/agent-skills
-/plugin install spring-boot@agent-skills
+/plugin enable skills
+/plugin install spring-boot@skills
 ```
 
 ### Claude Code (Manual Installation)
@@ -33,7 +33,7 @@ Skills are "onboarding guides" for specific domains that transform Claude from a
 git clone https://github.com/uuhnaut69/agent-skills.git
 
 # Copy skills to Claude Code skills directory
-cp -r agent-skills/plugins/* ~/.claude/skills/
+cp -r agent-skills/skills/* ~/.claude/skills/
 ```
 
 ## Usage
